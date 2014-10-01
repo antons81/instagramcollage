@@ -3,4 +3,4 @@ instagramcollage
 
 Test Assignment 
 
-This is my test asigment for Junior iOS Developer Position
+This is my test assignment for Junior iOS Developer Position
