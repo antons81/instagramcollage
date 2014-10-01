@@ -11,9 +11,7 @@
 @interface CollageViewController : UIViewController <UIPrintInteractionControllerDelegate>
 
 @property (strong, nonatomic) NSArray *imagesCollageArray;
-@property (strong, nonatomic) IBOutlet UIBarButtonItem *cancelCollage;
-@property (strong, nonatomic) IBOutlet UIBarButtonItem *print;
-@property (strong, nonatomic) UIImageView *img;
+
 
 
 @end

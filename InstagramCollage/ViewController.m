@@ -16,12 +16,13 @@
 @interface ViewController ()
 
 @property (assign, nonatomic) BOOL firstTimeAppear;
+@property (strong, nonatomic) UITextField *textField;
 
 @end
 
 @implementation ViewController
 
-@synthesize textField, jsonUserIdData, jsonPictureUrlData, instaUserID;
+@synthesize textField;//, jsonUserIdData, jsonPictureUrlData, instaUserID;
 
 
 - (void)viewDidLoad
@@ -68,16 +69,12 @@
     
     [super viewDidAppear:YES];
     
-    
     if ([[DataManager sharedManager] accessToken] == nil) {
         self.firstTimeAppear = YES;
         [[DataManager sharedManager] authorizeUser];
     } else {
         self.firstTimeAppear = NO;
     }
-    
-
-    
 }
 
 

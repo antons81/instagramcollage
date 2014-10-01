@@ -10,6 +10,10 @@
 
 @interface CollageViewController ()
 
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *cancelCollage;
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *print;
+@property (strong, nonatomic) UIImageView *img;
+
 @end
 
 @implementation CollageViewController {

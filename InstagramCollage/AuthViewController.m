@@ -8,8 +8,10 @@
 
 
 #import "AuthViewController.h"
-#import "AccessToken.h"
 #import "DataManager.h"
+
+#define kCLIENTID  @"client_id=c0678b29179a4c9e8f7854211c911d83&"
+#define kCLIENTSECRET @"client_secret=2d4c5d64a6ff4586b2d245c6c820ff87&"
 
 @interface AuthViewController ()
 
@@ -46,8 +48,8 @@
     self.navigationItem.title = @"Instagram Auth";
     
     NSString *urlString = [NSString stringWithFormat:@"https://instagram.com/oauth/authorize/?"
-                           "client_id=c0678b29179a4c9e8f7854211c911d83&"
-                           "client_secret=2d4c5d64a6ff4586b2d245c6c820ff87&"
+                           kCLIENTID
+                           kCLIENTSECRET
                            "grant_type=autorisation_code&"
                            "redirect_uri=http://localhost&"
                            "scope=likes+basic&"

@@ -14,16 +14,7 @@
 
 @interface ImagePickerViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate>
 
-@property (strong, nonatomic) IBOutlet UICollectionView *imageCollectionView;
 @property (strong, nonatomic) NSMutableArray *imagesArray;
-@property (strong, nonatomic) NSMutableArray *selectedPictures;
-@property (strong, nonatomic) UIImageView *selectedImg;
-
-
-
-
-
-
 
 
 @end

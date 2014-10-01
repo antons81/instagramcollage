@@ -11,6 +11,10 @@
 
 @interface ImagePickerViewController ()
 
+@property (strong, nonatomic) IBOutlet UICollectionView *imageCollectionView;
+@property (strong, nonatomic) NSMutableArray *selectedPictures;
+@property (strong, nonatomic) UIImageView *selectedImg;
+
 @end
 
 @implementation ImagePickerViewController
@@ -106,28 +110,24 @@
 - (IBAction)desmissController:(id)sender {
     [selectedPictures removeAllObjects];
     [self dismissViewControllerAnimated:YES completion:nil];
-    
-    //remove observer
-    //[[NSNotificationCenter defaultCenter] removeObserver:self name:@"GetPicturesArray" object:nil];
-   // NSLog(@"Observer has been removed");
 }
 
 
-/*- (IBAction)getCollage:(id)sender {
+- (IBAction)getCollage:(id)sender {
     UIStoryboard *storyboard = self.storyboard;
     CollageViewController *collageViewController = [storyboard instantiateViewControllerWithIdentifier:@"printCollage"];
     [collageViewController setModalTransitionStyle:UIModalTransitionStyleCrossDissolve];
     [collageViewController setImagesCollageArray:selectedPictures];
     [self presentViewController:collageViewController animated:YES completion:NULL];
-}*/
+}
 
-- (IBAction)getCollage:(id)sender {
+/*- (IBAction)getCollage:(id)sender {
     UIStoryboard *storyboard = self.storyboard;
     CollageCollectionViewController *collageCollectionViewController = [storyboard instantiateViewControllerWithIdentifier:@"CollageCollectionView"];
     [collageCollectionViewController setModalTransitionStyle:UIModalTransitionStyleCrossDissolve];
     [collageCollectionViewController setSelectedImages:selectedPictures];
     [self presentViewController:collageCollectionViewController animated:YES completion:nil];
-}
+}*/
 
 
 #pragma mark - Other Methods
